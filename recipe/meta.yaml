@@ -1,18 +1,18 @@
 {% set name = "junit2html" %}
-{% set version = "022" %}
+{% set version = "26" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2160977bec4168babd323da4cf86f5b33ae0220007df0f94abc3f0a57e6d9cdd
+  sha256: 189f50d83330bcdb64ba21a70aa0b2ca3c977c51f7955200a433706983c25d32
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
